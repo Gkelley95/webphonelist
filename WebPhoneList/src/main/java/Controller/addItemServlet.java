@@ -29,11 +29,11 @@ public class addItemServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		String store = request.getParameter("store");
+		String brand = request.getParameter("brand");
 		String item = request.getParameter("item");
 		String price = request.getParameter("price");
 		
-		ListItem li = new ListItem(store, item, price);
+		ListItem li = new ListItem(brand, item, price);
 		ListItemHelper dao = new ListItemHelper();
 		dao.insertItem(li);
 		
